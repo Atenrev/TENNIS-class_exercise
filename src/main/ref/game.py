@@ -13,7 +13,7 @@ class Game:
         self.player1 = player1
         self.player2 = player2
 
-    def get_score(self):
+    def get_score(self) -> str:
         p1 = self.player1.get_points()
         p2 = self.player2.get_points()
 
@@ -40,7 +40,7 @@ class Game:
             else:
                 return "Advantage player2"
 
-    def won_point(self, player: Player):
+    def won_point(self, player: Player) -> None:
         if player == self.player1:
             self.player1.add_point()
         else:
